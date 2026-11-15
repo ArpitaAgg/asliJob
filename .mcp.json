@@ -1,0 +1,38 @@
+{
+  "_comment": "MCP servers for AsliJob development. Replace each 'command'/'args'/'env' with the exact install command the provider documents, then remove this comment. Keys here are the servers the build plan calls for.",
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase", "--project-ref", "rqvwwudqyjoesvvgpfkx"],
+      "env": { "SUPABASE_ACCESS_TOKEN": "" }
+    },
+    "tigergraph": {
+      "command": "uvx",
+      "args": ["tigergraph-mcp"],
+      "env": {
+        "TG_HOST": "https://tg-384a143f-c085-4581-8e3b-46d59c0ed669.tg-2635877100.i.tgcloud.io",
+        "TG_GRAPH": "FraudGraph",
+        "TG_SECRET": "c8ib7qfhgb85mrqrst3f3ui8cgi0hk1m"
+      }
+    },
+    "viasocket": {
+      "command": "npx",
+      "args": ["-y", "<viasocket-mcp-package>"],
+      "env": { "VIASOCKET_API_KEY": "" }
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "" }
+    },
+    "vercel": {
+      "command": "npx",
+      "args": ["-y", "<vercel-mcp-package>"],
+      "env": { "VERCEL_TOKEN": "" }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"]
+    }
+  }
+}
